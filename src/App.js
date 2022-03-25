@@ -1,8 +1,7 @@
 import './App.css';
 import { Canvas } from "react-three-fiber"
-import {  ScrollControls, useScroll, Environment, Stats, Scroll } from "@react-three/drei";
-import { Suspense} from "react"
-import Plane from "./model";
+import { ScrollControls, useScroll, Environment, Stats, Scroll } from "@react-three/drei";
+import { Suspense } from "react"
 import Model from "./historyFrame";
 import Text from "./text.js";
 
@@ -24,13 +23,13 @@ function App() {
               <Model rotation={[0, Math.PI, 0]} position={[3, 0, 32]} />
               <Model rotation={[0, Math.PI, 0]} position={[3, 0, 66]} />
               <Model rotation={[0, Math.PI, 0]} position={[3, 0, 96]} />
-              
-              
+
+
             </group>
             <Environment preset="dawn" background />
-            <Scroll html>
-              <Text />
-            </Scroll>
+              <Scroll html>
+                <Text />
+              </Scroll>
           </ScrollControls>
         </Suspense>
         {/* <OrbitControls /> */}
