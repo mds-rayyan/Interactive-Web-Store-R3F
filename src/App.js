@@ -19,17 +19,18 @@ function App() {
         <Suspense fallback={null}>
           <ScrollControls pages={5} distance={1} >
             <group>
-              <Model rotation={[0, Math.PI, 0]} position={[3, 0, 0]} />
-              <Model rotation={[0, Math.PI, 0]} position={[3, 0, 32]} />
-              <Model rotation={[0, Math.PI, 0]} position={[3, 0, 66]} />
-              <Model rotation={[0, Math.PI, 0]} position={[3, 0, 96]} />
+              <Model position={[-5, 0, 0]} />
+              <Model position={[-5, 0, -32]} />
+              <Model position={[-5, 0, -66]} />
+              <Model position={[-5, 0, -96]} />
 
 
             </group>
-            <Environment preset="dawn" background />
-              <Scroll html>
-                <Text />
-              </Scroll>
+            <Environment preset="dawn" background = "only" >
+            </Environment>
+            <Scroll html>
+              <Text />
+            </Scroll>
           </ScrollControls>
         </Suspense>
         {/* <OrbitControls /> */}
